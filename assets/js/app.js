@@ -5,11 +5,16 @@ form.addEventListener("submit", function (event) {
   hvilket sker, når brugeren forsøger at sende formularen enten ved at trykke 
   på en submit-knap*/
   event.preventDefault;
-  /*For at , kontrolleres der om brugeren har udfyldt 
-  alle nødvendige felter korrekt.*/
+  /*Når brugeren prøver at sende formularen, aktiveres vores 
+  event listener-funktion, som straks kalder event.preventDefault(). 
+  Dette forhindrer, at formularen bliver sendt og siden genindlæses, 
+  hvilket giver os mulighed for at håndtere formularens data på vores 
+  egen måde. For eksempel kan vi tjekke om brugeren har udfyldt alle 
+  felterne korrekt eller sende dataene til serveren uden at genindlæse 
+  siden.*/
 });
 
-// Find DOM-elementer
+//variabeldeklarationer
 let submitInput = document.querySelector("#submitIput");
 let nameInput = document.querySelector("#nameInput");
 let birthInput = document.querySelector("#birthIput");
@@ -54,8 +59,4 @@ if (isValid) {
   form.submit();
 }
 
-/*Forklaring*/
-
-//if (nameInput.value.trim() === "")
 // value = angiver værdien
-// === "" {isValid = false;} = Betyder at den er tom, hvilket betyder at den er false.
