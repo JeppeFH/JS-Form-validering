@@ -22,6 +22,8 @@ let mailInput = document.querySelector("#mailIput");
 
 // Initialiser variabler
 let isValid = true;
+/* boolean variabel; en simpel datatype, der kun kan have én af to værdier: 
+true eller false. */
 let errorMessage = [];
 
 // Valider navn
@@ -37,6 +39,8 @@ if (nameInput.value.trim() === "") {
 
 // Valider fødselsdato
 if (birthInput.value.trim() === "") {
+  /*=== sikrer, at sammenligningen kun returnerer true, 
+  hvis begge værdier er af samme type og har samme værdi.*/
   isValid = false;
   birthInput.classList.add("Error");
   errorMessage.push("Skriv din fødselsdato");
@@ -46,6 +50,7 @@ if (birthInput.value.trim() === "") {
 
 // Valider E-mail
 if (mailInput.value.trim() === "") {
+  /*value henter eller indstiller værdi i inputfelt:*/
   isValid = false;
   mailInput.classList.add("Error");
   errorMessage.push("Skriv din E-mail");
@@ -58,5 +63,3 @@ send formularen*/
 if (isValid) {
   form.submit();
 }
-
-// value = angiver værdien
